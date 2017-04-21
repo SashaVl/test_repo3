@@ -1,0 +1,49 @@
+<FatturaElettronicaBody>
+<DatiGenerali>
+    <DatiGeneraliDocumento>
+        <TipoDocumento>TD01</TipoDocumento>
+        <Divisa>EUR</Divisa>
+        <Data>2016-12-15</Data>
+        <Numero>15/PA</Numero>
+        <ImportoTotaleDocumento>195.20</ImportoTotaleDocumento>
+    </DatiGeneraliDocumento>
+</DatiGenerali>
+<DatiBeniServizi>
+    <DettaglioLinee>
+        <NumeroLinea>1</NumeroLinea>
+        <Descrizione>Canone mensile servizio hotspot Corso Roma riferimento fatturazione GENNAIO - FEBBRAIO 2017</Descrizione>
+        <Quantita>2.00</Quantita>
+        <PrezzoUnitario>80.00</PrezzoUnitario>
+        <PrezzoTotale>160.00</PrezzoTotale>
+        <AliquotaIVA>22.00</AliquotaIVA>
+    </DettaglioLinee>
+    <DettaglioLinee>
+        <NumeroLinea>4</NumeroLinea>
+        <CodiceArticolo>
+            <CodiceTipo>INTERNO</CodiceTipo>
+            <CodiceValore>(NOTA)</CodiceValore>
+        </CodiceArticolo>
+        <Descrizione>Scissione dei pagamenti ai sensi dell'art. 17-ter del D.P.R. n. 633/1972</Descrizione>
+        <PrezzoUnitario>0.00</PrezzoUnitario>
+        <PrezzoTotale>0.00</PrezzoTotale>
+        <AliquotaIVA>22.00</AliquotaIVA>
+    </DettaglioLinee>
+    <DatiRiepilogo>
+        <AliquotaIVA>22.00</AliquotaIVA>
+        <ImponibileImporto>160.00</ImponibileImporto>
+        <Imposta>35.20</Imposta>
+        <EsigibilitaIVA>S</EsigibilitaIVA>
+        <RiferimentoNormativo>Aliq. 22% con scissione pagamenti</RiferimentoNormativo>
+    </DatiRiepilogo>
+</DatiBeniServizi>
+<DatiPagamento>
+    <CondizioniPagamento>TP02</CondizioniPagamento>
+    <DettaglioPagamento>
+        <ModalitaPagamento>MP05</ModalitaPagamento>
+        <DataScadenzaPagamento>2016-12-31</DataScadenzaPagamento>
+        <ImportoPagamento>160.00</ImportoPagamento>
+        <IstitutoFinanziario>Unicredit Spa</IstitutoFinanziario>
+        <IBAN>IT97B0200841101000101839468</IBAN>
+    </DettaglioPagamento>
+</DatiPagamento>
+</FatturaElettronicaBody>

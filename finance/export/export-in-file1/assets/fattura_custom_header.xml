@@ -1,0 +1,62 @@
+<FatturaElettronicaHeader>
+  <DatiTrasmissione>
+    <IdTrasmittente>
+      <IdPaese>IT</IdPaese>
+      <IdCodice>0123456</IdCodice>
+    </IdTrasmittente>
+    <ProgressivoInvio>00</ProgressivoInvio>
+    <FormatoTrasmissione>FPA12</FormatoTrasmissione>
+    <CodiceDestinatario>UF2HA8</CodiceDestinatario>
+  </DatiTrasmissione>
+  <CedentePrestatore>
+    <DatiAnagrafici>
+      <IdFiscaleIVA>
+        <IdPaese>IT</IdPaese>
+        <IdCodice>0123456</IdCodice>
+      </IdFiscaleIVA>
+      <CodiceFiscale>0123456</CodiceFiscale>
+      <Anagrafica>
+        <Denominazione>Ari@net Srl</Denominazione>
+      </Anagrafica>
+      <RegimeFiscale>RF01</RegimeFiscale>
+    </DatiAnagrafici>
+    <Sede>
+      <Indirizzo>Viale IV Novembre, 38</Indirizzo>
+      <CAP>86040</CAP>
+      <Comune>Rotello</Comune>
+      <Provincia>CB</Provincia>
+      <Nazione>IT</Nazione>
+    </Sede>
+    <IscrizioneREA>
+      <Ufficio>CB</Ufficio>
+      <NumeroREA>125992</NumeroREA>
+      <CapitaleSociale>10000.00</CapitaleSociale>
+      <SocioUnico>SM</SocioUnico>
+      <StatoLiquidazione>LN</StatoLiquidazione>
+    </IscrizioneREA>
+    <Contatti>
+      <Telefono>0874837909</Telefono>
+      <Fax>08741917281</Fax>
+      <Email>info@arianetsrl.it</Email>
+    </Contatti>
+    <RiferimentoAmministrazione>N.10 DEL 27/01/2015</RiferimentoAmministrazione>
+  </CedentePrestatore>
+  <CessionarioCommittente>
+    <DatiAnagrafici>
+      <IdFiscaleIVA>
+        <IdPaese>IT</IdPaese>
+        <IdCodice>00065080707</IdCodice>
+      </IdFiscaleIVA>
+      <Anagrafica>
+        <Denominazione>Comune di Casacalenda</Denominazione>
+      </Anagrafica>
+    </DatiAnagrafici>
+    <Sede>
+      <Indirizzo>Corso Roma,78</Indirizzo>
+      <CAP>86043</CAP>
+      <Comune>Casacalenda</Comune>
+      <Provincia>CB</Provincia>
+      <Nazione>IT</Nazione>
+    </Sede>
+  </CessionarioCommittente>
+</FatturaElettronicaHeader>
