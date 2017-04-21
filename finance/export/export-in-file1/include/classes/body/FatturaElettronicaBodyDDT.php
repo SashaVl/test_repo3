@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Created by PhpStorm.
+ * User: ubuntu-lin
+ * Date: 21/02/16
+ * Time: 19.17
+ */
 class FatturaElettronicaBodyDDT
 {
     protected $numero;

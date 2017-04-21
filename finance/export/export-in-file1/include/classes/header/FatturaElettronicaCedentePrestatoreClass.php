@@ -23,7 +23,7 @@ class FatturaElettronicaCedentePrestatoreClass extends FatturaAnagraficaClass {
         $this->setCodiceFiscale($FatturaCedentePrestatoreXml->DatiAnagrafici->CodiceFiscale->text);
         $this->setSede(new FatturaIndirizzoClass($FatturaCedentePrestatoreXml->Sede));
         if ( $FatturaCedentePrestatoreXml->StabileOrganizzazione ){
-            $this->setStabile(new FatturaIndirizzoClass($FatturaCedentePrestatoreXml->StabileOrganizzazione ));
+            $this->setStabile(new FatturaIndirizzoClass($FatturaCedentePrestatoreXml->StabileOrganizzazione ));            
         }
         if ( $FatturaCedentePrestatoreXml->IscrizioneREA ){
             $this->setRea(new FatturaAnagraficaReaClass());

@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Created by PhpStorm.
+ * User: ubuntu-lin
+ * Date: 21/02/16
+ * Time: 18.26
+ */
 class FatturaElettronicaBodyDatiContratto
 {
     protected $riferimentoNumeroLinea;

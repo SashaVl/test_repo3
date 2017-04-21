@@ -1,43 +1,41 @@
 <?php
 
-$file = __DIR__ . '/assets/fattura_singola_linea.xml';
+  $file = __DIR__ . '/assets/fattura_singola_linea.xml';
 // $file = __DIR__ . '/assets/fattura_multipla.xml';
 
 
 $includePath = __DIR__ . '/include/exceptions/';
-autoIncludeFiles($includePath);
+autoIncludeFiles( $includePath );
 $includePath = __DIR__ . '/include/baseclasses/';
-autoIncludeFiles($includePath);
+autoIncludeFiles( $includePath );
 
 $includePath = __DIR__ . '/include/classes/header';
-autoIncludeFiles($includePath);
+autoIncludeFiles( $includePath );
 
 $includePath = __DIR__ . '/include/classes/body';
-autoIncludeFiles($includePath);
+autoIncludeFiles( $includePath );
 
 $includePath = __DIR__ . '/include/classes';
-autoIncludeFiles($includePath);
+autoIncludeFiles( $includePath );
 
 
-$fatturra = new FatturaElettronicaClass($file);
-var_dump($fatturra->getHeader());
+new FatturaElettronicaClass($file);
 
-function autoIncludeFiles($includePath, $createClass = false)
-{
-    if (substr($includePath, -1) != DIRECTORY_SEPARATOR) {
+function autoIncludeFiles( $includePath, $createClass = false ) {
+    if ( substr( $includePath, - 1 ) != DIRECTORY_SEPARATOR ) {
         $includePath .= DIRECTORY_SEPARATOR;
     }
-    $directories = glob($includePath . '*');
-    foreach ($directories as $fileToImport) {
-        if (!is_file($fileToImport)) {
+    $directories = glob( $includePath . '*' );
+    foreach ( $directories as $fileToImport ) {
+        if (!is_file($fileToImport)){
             continue;
         }
         include_once $fileToImport;
-
-        if ($createClass) {
-            $classFile = pathinfo($fileToImport);
+        
+        if ( $createClass ) {
+            $classFile = pathinfo( $fileToImport );
             $className = $classFile['filename'];
-            if (class_exists($className)) {
+            if ( class_exists( $className ) ) {
                 new $className();
             }
         }
