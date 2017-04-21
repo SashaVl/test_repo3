@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="(File per visualizzazione FatturaPA 1.2 - NON inviare).xsl"?>
+<p:FatturaElettronica versione="FPA12" xmlns:p="http://ivaservizi.agenziaentrate.gov.it/docs/xsd/fatture/v1.2" xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+  <FatturaElettronicaHeader>
+    <DatiTrasmissione>
+      <IdTrasmittente>
+        <IdPaese>IT</IdPaese>
+        <IdCodice>01662570702</IdCodice>
+      </IdTrasmittente>
+      <ProgressivoInvio>41</ProgressivoInvio>
+      <FormatoTrasmissione>FPA12</FormatoTrasmissione>
+      <CodiceDestinatario>UF2HA8</CodiceDestinatario>
+    </DatiTrasmissione>
+    <CedentePrestatore>
+      <DatiAnagrafici>
+        <IdFiscaleIVA>
+          <IdPaese>IT</IdPaese>
+          <IdCodice>01662570702</IdCodice>
+        </IdFiscaleIVA>
+        <CodiceFiscale>01662570702</CodiceFiscale>
+        <Anagrafica>
+          <Denominazione>Ari@net Srl</Denominazione>
+        </Anagrafica>
+        <RegimeFiscale>RF01</RegimeFiscale>
+      </DatiAnagrafici>
+      <Sede>
+        <Indirizzo>Viale IV Novembre, 38</Indirizzo>
+        <CAP>86040</CAP>
+        <Comune>Rotello</Comune>
+        <Provincia>CB</Provincia>
+        <Nazione>IT</Nazione>
+      </Sede>
+      <IscrizioneREA>
+        <Ufficio>CB</Ufficio>
+        <NumeroREA>125992</NumeroREA>
+        <CapitaleSociale>10000.00</CapitaleSociale>
+        <SocioUnico>SM</SocioUnico>
+        <StatoLiquidazione>LN</StatoLiquidazione>
+      </IscrizioneREA>
+      <Contatti>
+        <Telefono>0874837909</Telefono>
+        <Fax>08741917281</Fax>
+        <Email>info@arianetsrl.it</Email>
+      </Contatti>
+      <RiferimentoAmministrazione>N.10 DEL 27/01/2015</RiferimentoAmministrazione>
+    </CedentePrestatore>
+    <CessionarioCommittente>
+      <DatiAnagrafici>
+        <IdFiscaleIVA>
+          <IdPaese>IT</IdPaese>
+          <IdCodice>00065080707</IdCodice>
+        </IdFiscaleIVA>
+        <Anagrafica>
+          <Denominazione>Comune di Casacalenda</Denominazione>
+        </Anagrafica>
+      </DatiAnagrafici>
+      <Sede>
+        <Indirizzo>Corso Roma,78</Indirizzo>
+        <CAP>86043</CAP>
+        <Comune>Casacalenda</Comune>
+        <Provincia>CB</Provincia>
+        <Nazione>IT</Nazione>
+      </Sede>
+    </CessionarioCommittente>
+  </FatturaElettronicaHeader>
+  <FatturaElettronicaBody>
+    <DatiGenerali>
+      <DatiGeneraliDocumento>
+        <TipoDocumento>TD01</TipoDocumento>
+        <Divisa>EUR</Divisa>
+        <Data>2016-12-15</Data>
+        <Numero>15/PA</Numero>
+        <ImportoTotaleDocumento>195.20</ImportoTotaleDocumento>
+      </DatiGeneraliDocumento>
+    </DatiGenerali>
+    <DatiBeniServizi>
+      <DettaglioLinee>
+        <NumeroLinea>1</NumeroLinea>
+        <Descrizione>Canone mensile servizio hotspot Corso Roma riferimento fatturazione GENNAIO - FEBBRAIO 2017</Descrizione>
+        <Quantita>2.00</Quantita>
+        <PrezzoUnitario>80.00</PrezzoUnitario>
+        <PrezzoTotale>160.00</PrezzoTotale>
+        <AliquotaIVA>22.00</AliquotaIVA>
+      </DettaglioLinee>
+      <DettaglioLinee>
+        <NumeroLinea>4</NumeroLinea>
+        <CodiceArticolo>
+          <CodiceTipo>INTERNO</CodiceTipo>
+          <CodiceValore>(NOTA)</CodiceValore>
+        </CodiceArticolo>
+        <Descrizione>Scissione dei pagamenti ai sensi dell'art. 17-ter del D.P.R. n. 633/1972</Descrizione>
+        <PrezzoUnitario>0.00</PrezzoUnitario>
+        <PrezzoTotale>0.00</PrezzoTotale>
+        <AliquotaIVA>22.00</AliquotaIVA>
+      </DettaglioLinee>
+      <DatiRiepilogo>
+        <AliquotaIVA>22.00</AliquotaIVA>
+        <ImponibileImporto>160.00</ImponibileImporto>
+        <Imposta>35.20</Imposta>
+        <EsigibilitaIVA>S</EsigibilitaIVA>
+        <RiferimentoNormativo>Aliq. 22% con scissione pagamenti</RiferimentoNormativo>
+      </DatiRiepilogo>
+    </DatiBeniServizi>
+    <DatiPagamento>
+      <CondizioniPagamento>TP02</CondizioniPagamento>
+      <DettaglioPagamento>
+        <ModalitaPagamento>MP05</ModalitaPagamento>
+        <DataScadenzaPagamento>2016-12-31</DataScadenzaPagamento>
+        <ImportoPagamento>160.00</ImportoPagamento>
+        <IstitutoFinanziario>Unicredit Spa</IstitutoFinanziario>
+        <IBAN>IT97B0200841101000101839468</IBAN>
+      </DettaglioPagamento>
+    </DatiPagamento>
+  </FatturaElettronicaBody>
+</p:FatturaElettronica>
