@@ -30,22 +30,27 @@ $tax = 22;
 
 foreach ($invoices as $i => $invoice) {
 
-    $dat_ = array(
-        'DenominazioneSeller'   =>  "",
-        'IndirizzoSeller'       =>  "",
-        'CAPSeller'             =>  "",
-        'ComuneSeller'          =>  "",
-        'ProvinciaSeller'        =>  "",
-        'IdPaese'               =>  vars::IdPaese,
-        'NazioneSeller'         =>  "",
-        'idCodice'              =>  vars::idCodice,
-        'progressivoInvio'      =>  vars::progressivoInvio,
+    /*
+     *
+     */
+
+    $array = array(
+        'DenominazioneSeller'   =>  $invoice['values']['company_name'],      //Назва компанії продавця послуг
+        'IndirizzoSeller'       =>  $invoice['values']['street_1']."".$invoice['values']['street_2'], //Юридична адреса компанії продавца послуг
+        'CAPSeller'             =>  $invoice['values']['zip'],               //Код почти компанії (Zip code) (юридична адреса продавця)
+        'ComuneSeller'          =>  $invoice['values']['city'],              //автономна й незалежна одиниця адміністративно-територіального поділу Італії (юридична адреса продавця)
+        'ProvinciaSeller'       =>  "",                                      //код провинции Італії наприклад: CB - CAMPOBASSO (юридична адреса продавця)
+        'IdPaese'               =>  vars::IDPAESE,                           //код країни (юридична адреса продавця)
+        'NazioneSeller'         =>  vars::NAZIONE,                           //Нація використовую скорочення код країни (юридична адреса продавця)
+        'idCodice'              =>  vars::idCodice,                          //налоговый кодекс (юридична адреса продавця)
+        'progressivoInvio'      =>  vars::progressivoInvio,                  //Тип документа
         'FormatoTrasmissione'   =>  vars::FormatoTrasmissione,
         'CodiceDestinatario'    =>  vars::CodiceDestinatario,
         'RegimeFiscale'         =>  vars::RegimeFiscale,
         'Ufficio'               =>  "",
         'NumeroREA'             =>  "",
         'CapitaleSociale'       =>  "",
+        'CodiceFiscale'         =>  "",
         'SocioUnico'            =>  "",
         'StatoLiquidazione'     =>  "",
         'Telefono'              =>  "",
@@ -77,15 +82,23 @@ foreach ($invoices as $i => $invoice) {
         'ImportoPagamento'      =>  "",
         'IstitutoFinanziario'   =>  "",
         'IBAN'                  =>  "",
-
+        'DatiBeniServizi'       =>  $invoice['items'],
+        'CodiceTip'             =>  "INTERNO",
+        'CodiceValore'          =>  "",
+        'DescrizioneTax'        =>  "",
+        'PrezzoUnitarioTax'     =>  "",
+        'EsigibilitaIVA'        =>  "",
     );
-    $dom = XmlCreator::GenXml($dat_);
 
-    $zip->addFromString ( $invoice['id'] . '.xml' , $dom->saveXML());
-
+    $dom = XmlCreator::GenXml($array);
+    echo $dom->saveXML();
+    //var_dump($invoice);
+    //$zip->addFromString ( $invoice['id'] . '.xml' , $dom->saveXML());
+    break;
 }
 $zip->close();
-readfile($zip_name);
+
+//readfile($zip_name);
 
 //var_dump($invoices);
 
@@ -103,7 +116,7 @@ $pathToScript = __DIR__ . _DS . '..' . _DS . '..' . _DS .
     '..' . _DS . '..' . _DS . 'script' . _DS . 'tools';
 
 
-$extension = 'zip';
+$extension = 'txt';
 $command = $pathToPHP . ' ' . $pathToScript . ' change-export-file-extension --type="invoice" --id="' . $export_id . '" --extension="' . $extension . '"';
 exec($command);
 
