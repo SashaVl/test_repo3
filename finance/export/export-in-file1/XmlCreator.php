@@ -1,6 +1,6 @@
 <?php
 class XmlCreator{
-    public static function GenXml($dat_,$is_tax = 1)
+    public static function GenXml($dat_)
     {
         $dom = new DOMDocument('1.0', 'utf-8');
         $dom->formatOutput = true;
@@ -337,9 +337,10 @@ class XmlCreator{
 
         $DatiBeniServizi = $dom->createElement('DatiBeniServizi');
 
-        $totalSum = 0;
-        $totalTax = 0;
-        $numLine = 1;
+        $totalSum = 0; //Сума до оплати без урахування податку
+        $totalTax = 0; //Загальний податок
+
+        $numLine = 1;  //номерація тегу NumeroLinea
         //*******Перелік послуг(таблична частина)******************
         if(!empty($dat_['DatiBeniServizi']))
         {
@@ -368,6 +369,12 @@ class XmlCreator{
 
                 $Sum = $val['price']*$val['quantity'];
 
+                $taxValue = 0;  //сума податку для однієї послуги
+                if($val['tax'] !== 0){
+                    $taxValue = ($val['price']*($val['tax']/100)*$val['quantity']);
+                }
+                $totalTax += $taxValue;
+
                 $totalSum += $Sum;
 
                 $PT = $dom->createElement("PrezzoTotale");
@@ -388,7 +395,7 @@ class XmlCreator{
         }
         //******************кінець табличної частини****************
 
-        if($totalTax !== 0)
+        if($totalTax != 0)
         {
             $numLine = $numLine + 3;
             //**************податок********************************
